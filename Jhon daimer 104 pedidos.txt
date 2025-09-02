@@ -1,0 +1,61 @@
+Algoritmo sin_titulo
+	// Jhon Daimer Conde Correa 104
+	Definir N, i, opcion_plato, opcion_bebida Como Entero
+	Definir total Como Real
+	Definir pedido Como Cadena
+	total <- 0
+	pedido <- ''
+	Escribir 'Bienvenido'
+	Escribir 'ingrese la cantidad de personas'
+	Leer N
+	Para i<-1 Hasta N Con Paso 1 Hacer
+		Escribir 'persona', i, ' seleccione su pedido:'
+		Escribir 'menu de plato'
+		Escribir '1.Pasta con pollo - $13.000'
+		Escribir '2.Pescado sudado - $20.000'
+		Escribir '3.Pollo a la plancha - $17.000'
+		Escribir '4.Arroz chino - $15.000'
+		Escribir 'seleccione su plato'
+		Leer opcion_plato
+		Según N Hacer
+			1:
+				Escribir 'elegiste Pasta con pollo', total
+				total = total+13000
+				pedido <- pedido+"-pasta con pollo-"
+			2:
+				Escribir 'elegiste Pescado sudado', total
+				total = total+20000
+				pedido <- pedido+'Pescado sudado'
+			3:
+				Escribir 'elegiste Pollo a la plancha', total
+				total = total+17000
+				pedido <- pedido+'pollo a la plancha'
+			4:
+				Escribir 'elegiste Arroz chino', total
+				total = total+15000
+				pedido <- pedido+'Arroz chino'
+		FinSegún
+		Escribir 'Bebidas'
+		Escribir '1.Jugos naturales - $5.000'
+		Escribir '2.Gaseosas - $4.000'
+		Escribir '3.Café - $2.000'
+		Escribir 'selecciona tu Bebida'
+		Leer opcion_bebida
+		Según N Hacer
+			1:
+				Escribir 'elegiste jugos naturales',total
+				total = total+5000
+				pedido <- pedido+'Jugos naturales'
+			2:
+				Escribir 'elegiste gaseosas',total
+				total = total+4000
+				pedido <- pedido+'Gaseosas'
+			3:
+				Escribir 'elegiste café',total
+				total = total+2000
+				pedido <- pedido+'Café'
+		FinSegún
+	FinPara
+	Escribir "tu pedido es : ", pedido
+	Escribir 'tu pago total es :', total
+FinAlgoritmo
